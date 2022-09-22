@@ -1,0 +1,6 @@
+version: '3'
+services:
+  mql4to5:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
