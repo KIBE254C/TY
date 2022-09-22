@@ -10,8 +10,8 @@ RUN apk add fontconfig \
     && apk add --update ttf-dejavu \
     && fc-cache --force
 RUN apk add --no-cache tzdata \
-    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
+    && ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
+    && echo "Asia/Tokyo" > /etc/timezone \
     &&rm -rf /var/cache/apk/* /tmp/* /var/tmp/* $HOME/.cache
 COPY --from=builder /project/build/libs/website-0.0.1.jar /project/    
 EXPOSE 8080
